@@ -1,7 +1,15 @@
 import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
 import { logo } from "./assets";
+import { Home, CreatePost } from "./pages";
 const App = () => {
-  return <h1 className="text-3xl font-bold underline">Hello world!</h1>;
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home/>}/>
+        <Route path="/create" element={<CreatePost/>}/>
+      </Routes>
+    </BrowserRouter>
+  );
 };
 
 export default App;
